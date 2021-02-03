@@ -10,7 +10,8 @@ conf.setProperty("gremlin.tinkergraph.vertexPropertyIdManager","LONG")
 graph = TinkerGraph.open(conf)
 
 // Change the path below to point to wherever you put the graphml file
-graph.io(graphml()).readGraph('/mydata/air-routes.graphml')
+data_dir='/Users/loganlangholz/Documents/GitHub/graph/sample-data'
+graph.io(graphml()).readGraph("${data_dir}/air-routes.graphml")
 
 g=graph.traversal()
 :set max-iteration 1000     
